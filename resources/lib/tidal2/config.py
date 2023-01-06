@@ -142,6 +142,7 @@ class TidalConfig(Config):
         return Config.token_secret.fget(self)
 
     def handle_deprecated_settings(self):
+        return
         # Delete or convert deprecated settings values from older addon versions
         if self.getSetting('username') != '': self.setSetting('username', '')
         if self.getSetting('password') != '': self.setSetting('password', '')
